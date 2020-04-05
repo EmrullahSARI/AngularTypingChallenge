@@ -1,13 +1,17 @@
 <router-outlet></router-outlet>
+<br>
 <div class="container">
   <div class="columns is-centered">
     <div class="box column is-one-third">
       <h1 class="title has-text-centered">Typing Challenge</h1>
-      <p class="has-text-center"></p>
+      <p class="has-text-centered">
+        <span [class]="checkChar( letter, enteredText[ i ] )" *ngFor="let letter of randomText.split(''); let i = index">{{ randomText[ i ] }}</span>
+      </p>
+      <br>
       <div class="field">
-        <input type="text" class="input">
+        <input type="text" class="input" (input)="onInput($event.target.value)">
       </div>
-      <div class="box has-text-centered">
+      <div class="box has-text-centered" *ngIf="isSuccess">
         <h5 class="title">Success !</h5>
       </div>
     </div>
