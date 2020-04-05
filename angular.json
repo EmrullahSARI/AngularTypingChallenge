@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "typingChallengeApp"
+    }
+  },
+  "defaultProject": "typingChallengeApp",
+  "cli": {
+    "analytics": "756a3434-1e86-4e0b-85d9-efd0d4bee8fc"
+  }
 }
